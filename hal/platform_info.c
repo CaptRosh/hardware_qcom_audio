@@ -428,12 +428,6 @@ static void process_device_name(const XML_Char **attr)
         goto done;
     }
 
-    if (platform_set_snd_device_name(index, attr[3]) < 0) {
-        ALOGE("%s: Device %s, alias %s was not set!",
-              __func__, attr[1], attr[3]);
-        goto done;
-    }
-
 done:
     return;
 }
